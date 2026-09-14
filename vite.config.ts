@@ -1,6 +1,8 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  nitro: false,
+
   tanstackStart: {
     server: {
       entry: "server",
@@ -8,10 +10,9 @@ export default defineConfig({
 
     prerender: {
       enabled: true,
+      crawlLinks: true,
       autoSubfolderIndex: true,
       autoStaticPathsDiscovery: true,
-      crawlLinks: true,
-      failOnError: true,
     },
   },
 });
